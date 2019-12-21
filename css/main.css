@@ -1,0 +1,358 @@
+.img-preview {
+    width: 256px;
+    height: 256px;
+    position: relative;
+    border: 5px solid #F8F8F8;
+    box-shadow: 0px 2px 4px 0px#4770b1;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.img-preview>div {
+    width: 100%;
+    height: 100%;
+    background-size: 300px 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.upload-label {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #39D2B4;
+    color: #fff;
+    font-size: 1em;
+    transition: all .4s;
+    cursor: pointer;
+}
+
+.upload-label:hover {
+    background: #34495E;
+    color: #39D2B4;
+}
+
+.loader {
+    border: 8px solid #f3f3f3;
+    /* Light grey */
+    border-top: 8px solid #3498db;
+    /* Blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+.start-header {
+    opacity: 1;
+    transform: translateY(0);
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    background-color: #69afd9;
+    padding: 20px 0;
+    padding-top: 0;
+}
+
+.start-header.scroll-on {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+    background-color: #69afd9;
+    padding: 0;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.start-header.scroll-on .navbar-light .navbar-nav .nav-link {
+    padding: 25px 15px;
+}
+
+.start-header.scroll-on .seperator {
+    display: none;
+}
+
+.row:before,
+.row:after {
+    display: inline-block;
+}
+
+.start-header .navbar ul {
+    top: 30px;
+}
+
+.navigation-wrap {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.navbar {
+    padding: 0;
+}
+
+.navbar-brand {
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-brand img {
+    width: auto;
+    display: block;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.navbar-toggler {
+    float: right;
+    border: none;
+    padding: 0;
+}
+
+.navbar-toggler:active,
+.navbar-toggler:focus {
+    outline: none;
+}
+
+.navbar-light .navbar-toggler-icon {
+    width: 24px;
+    height: 17px;
+    background-image: none;
+    position: relative;
+    border-bottom: 2px solid #d81362;
+    transition: all 300ms linear;
+}
+
+.navbar-light .navbar-toggler-icon:after,
+.navbar-light .navbar-toggler-icon:before {
+    width: 24px;
+    position: absolute;
+    height: 2px;
+    background-color: #d81362;
+    top: 0;
+    left: 0;
+    content: '';
+    z-index: 2;
+    transition: all 300ms linear;
+}
+
+.navbar-light .navbar-toggler-icon:after {
+    top: 8px;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
+    transform: rotate(45deg);
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
+    transform: translateY(8px) rotate(-45deg);
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    border-color: transparent;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: .5px;
+    padding: 30px 15px;
+    position: relative;
+    transition: all 200ms linear;
+}
+
+.navbar-light .dropdown-item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    padding: 10px;
+    color: #e3e3e3;
+}
+
+.navbar-light .dropdown-item:hover {
+    color: #d81362;
+    background-color: transparent;
+}
+
+.navbar-light .dropdown-item:last-child {
+    border: 0;
+}
+
+#searchLink .dropdown-toggle:after {
+    display: none;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    background-color: transparent;
+    color: #d81362;
+}
+
+.navbar-light .dropdown-menu {
+    padding: 0;
+    border-radius: 0;
+    border: 0;
+    margin-top: 0;
+    background-color: rgba(211, 55, 118, 0.99);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+.v-none {
+    visibility: hidden;
+}
+
+.white {
+    color: #fff;
+}
+
+
+/*---------Mega Menu--------------*/
+
+.mega-menu {
+    left: 0;
+    width: 100%;
+    background: rgba(211, 55, 118, 0.99);
+}
+
+.mega-menu .mega-menu-inner {
+    padding: 20px;
+}
+
+.mega-menu .mega-menu-inner .dropdown-item {
+    padding: 10px 0;
+    color: #e3e3e3;
+}
+
+
+/*----------END Mega Menu-------------------*/
+
+.nav-item:hover:after {
+    bottom: 0;
+    opacity: 1;
+}
+
+.nav-item.active:hover:after {
+    opacity: 0;
+}
+
+.nav-item {
+    position: relative;
+    transition: all 200ms linear;
+}
+
+.nav-item.mega-menu-link {
+    position: static;
+}
+
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #d81362;
+}
+
+.navbar-light .navbar-nav .active>.nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show>.nav-link {
+    color: #d81362;
+}
+
+.close-search {
+    display: none;
+}
+
+button#searchsubmit {
+    line-height: inherit;
+    border-radius: 0;
+    background-color: #d81362;
+    color: #fff;
+}
+
+#searchLink a {
+    color: #fff;
+    padding: 5px 15px;
+}
+
+#searchbox {
+    box-shadow: none;
+    padding: 8px 14px;
+    border-radius: 0px;
+}
+
+#searchbox:hover {
+    box-shadow: none;
+}
+
+#searchform .form-control:focus {
+    border-color: #ccc;
+    outline: 0;
+}
+
+
+/* #Banner
+
+================================*/
+
+.exp-banner-head,
+.exp-banner-head-about-1,
+#exp-inner-banner,
+.exp-banner-b-left,
+.exp-banner-head-details-r,
+.exp-banner-blog-g,
+.exp-banner-head-bl,
+.exp-banner-head-blog-r,
+.exp-banner-contact,
+.exp-banner-contact-2,
+.exp-banner-head-p,
+.exp-banner-pricing,
+.exp-banner-pricing-3,
+.exp-banner-head-project-1,
+.exp-banner-head-project-2,
+.exp-banner-head-project-3,
+.exp-banner-head-team1,
+.exp-banner-head-team-3,
+.exp-banner-head-team-4 {
+    background-image: url(../img/about-1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.exp-banner-head .section-title-center h1 {
+    margin-bottom: 10px;
+}
+
+.exp-banner-head .exp-banner-title {
+    padding: 200px 0;
+}
+
+.exp-banner-head .exp-banner-title p {
+    margin-bottom: 0;
+}
+
+.exp-banner-head .exp-banner-title p span:before {
+    content: ".";
+    font-size: 25px;
+    vertical-align: text-bottom;
+    padding: 0 10px;
+    color: #fff;
+}
+
+
+/*Homepage 1
+
+================================================*/
+
+.exp-home1-header .exp-slick-dots {
+    position: relative;
+    bottom: -120px;
+    left: 20%;
+    width: 100%;
+}
+
+.exp-home1-header .exp-slick-dots li.slick-active button {
+    width: 35px;
+    opacity: 1;
+    border-radius: 50px;
+}
